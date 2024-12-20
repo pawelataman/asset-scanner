@@ -38,9 +38,9 @@ func ScanAssets(assetsPath string, targetPath string, assetFileExt string, withR
 				if err = os.Remove(assetPath); err != nil {
 					return fmt.Errorf("could not delete file %s", assetPath)
 				}
-				fmt.Printf("Removed asset at: %s", assetPath)
+				fmt.Printf("Removed asset at: %s \n", assetPath)
 			} else {
-				fmt.Printf("Found unused asset at: %s", assetPath)
+				fmt.Printf("Found unused asset at: %s \n", assetPath)
 			}
 		}
 	}
