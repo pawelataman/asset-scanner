@@ -8,6 +8,18 @@ import (
 )
 
 func main() {
+
+	flag.Usage = func() {
+		fmt.Println("usage of asset-scanner: asset-scanner [assetsDirectory] [targetDirectory] [flags]")
+
+		fmt.Println("\nparameters:")
+		fmt.Println("\tassetsDirectory: root directory of assets to be removed")
+		fmt.Println("\ttargetDirectory: root directory where search should take place")
+
+		fmt.Println("\nflags:")
+		flag.PrintDefaults()
+	}
+
 	// CLI flags
 	var withRemove bool
 	var fileExt string
